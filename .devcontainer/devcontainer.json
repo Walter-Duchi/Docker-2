@@ -4,7 +4,9 @@
 		"context": "..",
 		"dockerfile": "../Dockerfile"
 	},
-	/*"customizations": {
+	"forwardPorts": [3000],
+	"postCreateCommand": "apt-get update && apt-get install -y zsh && chsh -s /bin/zsh && echo 'export SHELL=/bin/zsh' >> ~/.bashrc && echo 'exec /bin/zsh' >> ~/.bashrc",
+	"customizations": {
 		"vscode": {
 			"settings": {
 				"terminal.integrated.defaultProfile.linux": "zsh",
@@ -15,10 +17,5 @@
 				}
 			}
 		}
-	},*/
-	"forwardPorts": [
-		3000
-	]//,
-	//"postCreateCommand": "apt-get update && apt-get install -y zsh",
-	//"initializeCommand": "ls"
+	}
 }
