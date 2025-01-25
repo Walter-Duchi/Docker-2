@@ -14,7 +14,8 @@
 					"zsh": {
 						"path": "/bin/zsh"
 					}
-				}
+				},
+				"terminal.integrated.shellArgs.linux": ["-c", "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"]
 			}
 		}
 	}
